@@ -1,0 +1,26 @@
+$breakpoints: (
+  "sp": "screen and (max-width: 767px)",
+  "pc": "screen and (min-width: 768px)",
+  //"sp": "screen and (max-width: 520px)",
+  //"tab": "screen and (min-width: 519px)",
+  //"pc": "screen and (min-width: 959px)",,,,,,
+) !default;
+
+$layers: (
+  bg-back: -1,
+  to-top: 4,
+  header: 5,
+  overlay: 10,
+  nav-wrap: 15,
+  menu: 20,
+);
+
+$color-black: #3e3c3c;
+$color-gray: #f5f5f5;
+$color-pink: #dd98a5;
+$color-cream: #f7f6e7;
+$color-orange: #dcad81;
+$color-blue: #5c7f9e;
+$color-green: #6ca475;
+
+$item-width: 8rem;

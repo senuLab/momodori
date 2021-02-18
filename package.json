@@ -1,0 +1,33 @@
+{
+  "name": "momodori",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senuLab/momodori.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/senuLab/momodori/issues"
+  },
+  "homepage": "https://github.com/senuLab/momodori#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "browser-sync": "^2.26.14",
+    "css-declaration-sorter": "^6.0.2",
+    "css-mqpacker": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "postcss": "^8.2.6"
+  }
+}
