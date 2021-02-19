@@ -24,26 +24,62 @@
         <!-- header start -->
         <header class="l-header">
             <div class="p-header">
-                <nav class="p-nav">
+                <nav class="p-nav js-nav">
                     <ul class="p-nav__list">
-                        <li class="p-nav__item">当店のこだわり</li>
-                        <li class="p-nav__item">メニュー</li>
-                        <li class="p-nav__item">アクセス</li>
+                        <li class="p-nav__item">
+                            <a
+                                href=""
+                                #a-commitment
+                                class="p-nav__link c-link js-link"
+                            >
+                                当店のこだわり
+                            </a>
+                        </li>
+                        <li class="p-nav__item">
+                            <a
+                                href="#a-menu"
+                                class="p-nav__link c-link js-link"
+                            >
+                                メニュー
+                            </a>
+                        </li>
+                        <li class="p-nav__item">
+                            <a
+                                href="#a-access"
+                                class="p-nav__link c-link js-link"
+                            >
+                                アクセス
+                            </a>
+                        </li>
                     </ul>
                 </nav>
+                <div class="p-nav__trigger u-display--pc-none js-trigger">
+                    <span class="js-trigger-part p-nav__trigger-part"></span>
+                    <span class="js-trigger-part p-nav__trigger-part"></span>
+                    <span class="js-trigger-part p-nav__trigger-part"></span>
+                </div>
+
                 <p class="p-header__telephone">
-                    お問い合わせ・ご注文<br />090-0000-0000
+                    お問い合わせ・ご注文<br />050-5452-8244
                 </p>
-                <div class="p-header__btn-wrap">
+                <div class="p-header__btn-wrap u-display--sp-none">
                     <a href="" class="p-header__btn c-btn">
                         HOT PEPPERで予約する
+                    </a>
+                </div>
+                <div class="p-header__btn-wrap u-display--pc-none">
+                    <a
+                        href="https://www.hotpepper.jp/strJ000836938/yoyaku/"
+                        class="p-header__btn c-btn c-btn--circle"
+                    >
+                        ネットで予約する
                     </a>
                 </div>
             </div>
         </header>
         <!-- header end -->
         <!-- commitment start -->
-        <section class="p-commitment">
+        <section class="p-commitment" id="a-commitment">
             <h2 class="p-commitment__title c-title">当店のこだわり</h2>
             <div class="p-commitment__content-wrap">
                 <div class="p-commitment__content">
@@ -130,7 +166,7 @@
         </section>
         <!-- commitment end -->
         <!-- menu start -->
-        <section class="p-menu">
+        <section class="p-menu" id="a-menu">
             <h2 class="p-menu__title c-title">メニュー</h2>
             <div class="p-menu__tab-wrap">
                 <div class="p-menu__selector-wrap">
@@ -257,7 +293,7 @@
         </section>
         <!-- menu end -->
         <!-- access start -->
-        <section class="access">
+        <section class="access" id="a-access">
             <h2 class="p-access__title c-title">アクセス</h2>
             <div class="p-access__content-wrap">
                 <div class="p-access__map-wrap"></div>
@@ -302,5 +338,7 @@
             </div>
         </footer>
         <!-- footer end -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="./js/custom.js"></script>
     </body>
 </html>
