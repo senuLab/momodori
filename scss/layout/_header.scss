@@ -1,0 +1,11 @@
+.l-header {
+    //position: fixed;
+    z-index: map-get($layers, header);
+    width: 100%;
+    height: 8rem;
+    background-color: $color-green;
+
+    @include mq("pc") {
+        height: 10rem;
+    }
+}
