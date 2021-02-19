@@ -1,0 +1,58 @@
+.p-header {
+    position: relative;
+    //z-index: 5;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1.2rem 2rem 1.3rem;
+    margin: 0 auto;
+    max-width: 50rem;
+
+    @include mq("pc") {
+        flex-direction: row;
+        padding: 0 2rem;
+        max-width: 120rem;
+        height: 100%;
+    }
+
+    &__btn-wrap {
+        margin-right: auto;
+        width: 5.5rem;
+        height: 5.5rem;
+        font-size: 1.2rem;
+
+        @include mq("pc") {
+            margin: auto 0;
+            margin-left: auto;
+            width: auto;
+            height: fit-content;
+            font-size: 1.6rem;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+
+        @include mq("pc") {
+            display: block;
+            height: auto;
+        }
+    }
+
+    &__telephone {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+        color: white;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: bold;
+        line-height: 1.8rem;
+
+        @include mq("pc") {
+            margin: 0;
+        }
+    }
+}

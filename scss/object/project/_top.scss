@@ -1,0 +1,13 @@
+.p-top {
+    //position: relative;
+    //top: 8rem;
+
+    @include mq("pc") {
+        //top: 10rem;
+        width: 100%;
+        //height: 54rem;
+    }
+
+    &__img-wrap {
+    }
+}
