@@ -1,0 +1,108 @@
+.p-menu {
+    padding: 5rem 4rem 5rem;
+
+    @include mq("pc") {
+        padding: 5rem 4rem 10rem;
+    }
+
+    &__title {
+        margin: 0 auto 10rem;
+    }
+
+    &__selector-wrap {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 6rem;
+        width: 100%;
+
+        @include mq("pc") {
+            margin: 0 auto 8rem;
+        }
+    }
+
+    &__selector {
+        position: relative;
+        width: 100%;
+        padding: 2rem 0.5rem;
+        border: 0.1rem solid black;
+        cursor: pointer;
+
+        @include mq("pc") {
+            padding: 3rem 1rem;
+            max-width: 35rem;
+        }
+
+        &--is-active {
+            background-color: red;
+            border: 0.1rem solid red;
+
+            &::after {
+                position: absolute;
+                content: "";
+            }
+        }
+    }
+
+    &__selector-text {
+        font-size: 1.4em;
+        font-weight: bold;
+        text-align: center;
+        //white-space: nowrap;
+
+        @include mq("pc") {
+            font-size: 2.2rem;
+        }
+
+        &--is-active {
+            color: white;
+        }
+    }
+
+    &__head {
+        margin-bottom: 4rem;
+        text-align: center;
+        font-weight: bold;
+
+        @include mq("pc") {
+        }
+    }
+
+    &__body {
+        @include mq("pc") {
+            display: flex;
+        }
+    }
+
+    &__item {
+        margin-bottom: 5rem;
+
+        @include mq("pc") {
+            max-width: 30rem;
+
+            &:not(:last-child) {
+                margin-right: 6rem;
+            }
+        }
+    }
+
+    &__img-wrap {
+        margin-bottom: 3rem;
+        @include mq("pc") {
+        }
+    }
+
+    &__name {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    &__special {
+        max-width: 45rem;
+        margin: 0 auto;
+        font-weight: bold;
+    }
+
+    &__special-word {
+        color: red;
+    }
+}

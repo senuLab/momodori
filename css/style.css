@@ -68,6 +68,7 @@ input {
 }
 
 html {
+  background-image: url(./../../img/bg-image.jpg);
   font-size: 62.5%;
 }
 
@@ -293,6 +294,7 @@ body {
 
 .c-img {
   width: 100%;
+  height: 100%;
 }
 
 .c-link {
@@ -300,11 +302,184 @@ body {
 }
 
 .c-title {
+  position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-weight: bold;
+  font-size: 3rem;
+}
+
+.c-title::before {
+  position: absolute;
+  top: 50%;
+  right: -1rem;
+  width: 0.5rem;
+  height: 100%;
+  transform: translateY(-50%);
+  border: 0.2rem solid #000;
+  border-left: none;
+  content: "";
+}
+
+.c-title::after {
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  width: 0.5rem;
+  height: 100%;
+  transform: translateY(-50%);
+  border: 0.2rem solid #000;
+  border-right: none;
+  content: "";
+}
+
+.p-commitment {
+  padding: 8rem 3rem;
+}
+
+.p-commitment__title {
+  margin: 0 auto 10rem;
+}
+
+.p-commitment__content {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.p-commitment__img-wrap {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.p-commitment__message {
+  margin-bottom: 6rem;
+}
+
+.p-commitment__head {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 4rem;
+  font-weight: bold;
   font-size: 2.4rem;
+}
+
+.p-commitment__head::before {
+  z-index: -1;
+  position: absolute;
+  top: -3rem;
+  left: -3rem;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background-color: rgba(188, 176, 70, 0.5);
+  content: "";
+}
+
+.p-commitment__body {
+  max-width: 45rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+.p-commitment__sns {
+  max-width: 30rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.p-commitment__sns-introduction {
+  position: relative;
+  margin-bottom: 4rem;
+  padding: 0 1.5rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+
+.p-commitment__sns-introduction::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 5rem;
+  transform: translateY(-50%) rotate(-30deg);
+  background-color: black;
+  content: "";
+}
+
+.p-commitment__sns-introduction::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0.4rem;
+  height: 5rem;
+  transform: translateY(-50%) rotate(30deg);
+  background-color: black;
+  content: "";
+}
+
+.p-commitment__sns-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+
+.p-commitment__sns-icon-wrap {
+  /*相対配置*/
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  /*幅*/
+  height: 50px;
+  margin-right: 1rem;
+  /*グラデーション①*/
+  overflow: hidden;
+  /*はみ出た部分を隠す*/
+  border-radius: 13px;
+  /*高さ*/
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  /*角丸に*/
+}
+
+.p-commitment__sns-icon-wrap::before {
+  position: absolute;
+  /*絶対配置*/
+  top: 23px;
+  /*ずらす*/
+  left: -18px;
+  /*ずらす*/
+  width: 60px;
+  /*グラデーションカバーの幅*/
+  height: 60px;
+  /*グラデーションカバーの高さ*/
+  background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+  content: "";
+  /*グラデーション②*/
+}
+
+.p-commitment__sns-icon {
+  /*z-indexを使うため*/
+  z-index: 2;
+  /*白に*/
+  position: relative;
+  color: #fff;
+  /*グラデーションより前に*/
+  font-size: 35px;
+  /*アイコンサイズ*/
+  line-height: 50px !important;
+  /*高さと合わせる*/
+}
+
+.p-commitment__sns-icon:hover {
+  color: #668ad8;
+  /*文字色*/
+  transition: 0.5s;
+  /*ゆっくり変化*/
 }
 
 .p-header {
@@ -339,6 +514,78 @@ body {
   font-size: 1.4rem;
   line-height: 1.8rem;
   text-align: center;
+}
+
+.p-menu {
+  padding: 5rem 4rem 5rem;
+}
+
+.p-menu__title {
+  margin: 0 auto 10rem;
+}
+
+.p-menu__selector-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 6rem;
+}
+
+.p-menu__selector {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0.5rem;
+  border: 0.1rem solid black;
+  cursor: pointer;
+}
+
+.p-menu__selector--is-active {
+  border: 0.1rem solid red;
+  background-color: red;
+}
+
+.p-menu__selector--is-active::after {
+  position: absolute;
+  content: "";
+}
+
+.p-menu__selector-text {
+  font-weight: bold;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.p-menu__selector-text--is-active {
+  color: white;
+}
+
+.p-menu__head {
+  margin-bottom: 4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.p-menu__item {
+  margin-bottom: 5rem;
+}
+
+.p-menu__img-wrap {
+  margin-bottom: 3rem;
+}
+
+.p-menu__name {
+  font-weight: bold;
+  text-align: center;
+}
+
+.p-menu__special {
+  max-width: 45rem;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.p-menu__special-word {
+  color: red;
 }
 
 .p-nav {
@@ -423,6 +670,14 @@ body {
   transform: translateY(-0.85rem) rotate(-45deg);
 }
 
+.p-top__img-wrap {
+  width: 100%;
+}
+
+.p-top__img {
+  display: block;
+}
+
 @media screen and (min-width: 768px) {
   .l-header {
     height: 10rem;
@@ -434,7 +689,62 @@ body {
     right: 1rem;
   }
   .c-title {
+    font-size: 3.6rem;
+  }
+  .c-title::before {
+    right: -1.5rem;
+  }
+  .c-title::after {
+    left: -1.5rem;
+  }
+  .p-commitment {
+    padding: 10rem 10rem 5rem;
+  }
+  .p-commitment__content-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .p-commitment__content {
+    display: flex;
+    max-width: 95rem;
+  }
+  .p-commitment__content:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .p-commitment__content:nth-child(odd) > .p-commitment__img-wrap {
+    margin-right: 10rem;
+  }
+  .p-commitment__content:nth-child(even) > .p-commitment__message {
+    margin-right: 10rem;
+  }
+  .p-commitment__content:not(:nth-child(n + 4)) {
+    margin-bottom: 6rem;
+  }
+  .p-commitment__content:nth-last-child(2) {
+    margin-bottom: 10rem;
+  }
+  .p-commitment__img-wrap {
+    max-width: 40rem;
+    margin: 0;
+  }
+  .p-commitment__message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+  .p-commitment__head {
     font-size: 3rem;
+  }
+  .p-commitment__head::before {
+    top: -3.5rem;
+    left: -3.5rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  .p-commitment__body {
+    font-size: 2.4rem;
+    line-height: 3rem;
   }
   .p-header {
     flex-direction: row;
@@ -457,6 +767,28 @@ body {
   }
   .p-header__telephone {
     margin: 0;
+  }
+  .p-menu {
+    padding: 5rem 4rem 10rem;
+  }
+  .p-menu__selector-wrap {
+    margin: 0 auto 8rem;
+  }
+  .p-menu__selector {
+    max-width: 35rem;
+    padding: 3rem 1rem;
+  }
+  .p-menu__selector-text {
+    font-size: 2.2rem;
+  }
+  .p-menu__body {
+    display: flex;
+  }
+  .p-menu__item {
+    max-width: 30rem;
+  }
+  .p-menu__item:not(:last-child) {
+    margin-right: 6rem;
   }
   .p-nav {
     visibility: visible;

@@ -13,10 +13,10 @@ $(function(){
                 $(".l-header").addClass("active");
                 $(".p-commitment").css("position","relative");
                 if (window.matchMedia( "(max-width: 768px)" ).matches){
-                    $(".p-commitment").css("padding-top","8rem");
+                    $(".p-commitment").css("margin-top","8rem");
                 }
                 else{
-                    $(".p-commitment").css("padding-top","10rem");
+                    $(".p-commitment").css("margin-top","10rem");
                 }
                 }
             }
@@ -24,7 +24,7 @@ $(function(){
                 if($(".l-header").hasClass("active")){
                 $(".l-header").css("position","static");
                 $(".l-header").removeClass("active");
-                $(".p-commitment").css("padding-top","0");
+                $(".p-commitment").css("margin-top","0");
                 }
             }
 
