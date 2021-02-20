@@ -59,4 +59,18 @@ $(function(){
         return false;
     }); 
 
+    $(".js-selector").on("click",function(){
+        //console.log("click");
+        if(!$(this).hasClass("p-menu__selector--is-active")){
+            $(".js-selector").each(function(index,element){
+                $(this).removeClass("p-menu__selector--is-active");
+                $(this).children().removeClass("p-menu__selector-text--is-active");
+                //console.log(element);
+            });
+
+            $(this).addClass("p-menu__selector--is-active")
+            $(this).children().addClass("p-menu__selector-text--is-active")
+        }
+    });
+
 });

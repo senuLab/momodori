@@ -529,6 +529,7 @@ body {
   justify-content: center;
   width: 100%;
   margin: 0 auto 6rem;
+  transition: all 0.3s;
 }
 
 .p-menu__selector {
@@ -537,31 +538,51 @@ body {
   padding: 2rem 0.5rem;
   border: 0.1rem solid black;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .p-menu__selector--is-active {
-  border: 0.1rem solid red;
-  background-color: red;
+  position: relative;
+  border: 0.1rem solid #d23535;
+  background-color: #d23535;
 }
 
 .p-menu__selector--is-active::after {
   position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, 100%);
+  border-width: 26px 15px 0 15px;
+  border-style: solid;
+  border-color: #d23535 transparent transparent transparent;
   content: "";
 }
 
 .p-menu__selector-text {
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   text-align: center;
+  transition: all 0.3s;
 }
 
 .p-menu__selector-text--is-active {
   color: white;
 }
 
+.p-menu__content {
+  display: none;
+}
+
+.p-menu__content--is-active {
+  display: block;
+}
+
 .p-menu__head {
   margin-bottom: 4rem;
   font-weight: bold;
+  font-size: 1.8rem;
   text-align: center;
 }
 
@@ -575,17 +596,21 @@ body {
 
 .p-menu__name {
   font-weight: bold;
+  font-size: 2.4rem;
   text-align: center;
 }
 
 .p-menu__special {
-  max-width: 45rem;
+  max-width: 60rem;
   margin: 0 auto;
-  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 3rem;
 }
 
 .p-menu__special-word {
-  color: red;
+  color: #d23535;
+  font-weight: bold;
+  font-size: 2.6rem;
 }
 
 .p-nav {
@@ -778,8 +803,14 @@ body {
     max-width: 35rem;
     padding: 3rem 1rem;
   }
+  .p-menu__selector--is-active::after {
+    border-width: 43.3px 25px 0 25px;
+  }
   .p-menu__selector-text {
     font-size: 2.2rem;
+  }
+  .p-menu__head {
+    font-size: 2rem;
   }
   .p-menu__body {
     display: flex;
@@ -789,6 +820,16 @@ body {
   }
   .p-menu__item:not(:last-child) {
     margin-right: 6rem;
+  }
+  .p-menu__name {
+    font-size: 2.8rem;
+  }
+  .p-menu__special {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+  }
+  .p-menu__special-word {
+    font-size: 3rem;
   }
   .p-nav {
     visibility: visible;
