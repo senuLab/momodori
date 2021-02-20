@@ -364,7 +364,7 @@ body {
 }
 
 .p-access__information-item {
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 2.6rem;
   text-align: center;
 }
@@ -619,15 +619,19 @@ body {
   text-align: center;
 }
 
-.p-header__telephone {
+.p-header__telephone-wrap {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   margin-right: auto;
-  color: white;
   font-weight: bold;
   font-size: 1.4rem;
   line-height: 1.8rem;
   text-align: center;
+}
+
+.p-header__telephone {
+  color: white;
 }
 
 .p-menu {
@@ -966,7 +970,7 @@ body {
     display: block;
     height: auto;
   }
-  .p-header__telephone {
+  .p-header__telephone-wrap {
     margin: 0;
   }
   .p-menu {
