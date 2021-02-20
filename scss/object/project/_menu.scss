@@ -14,6 +14,7 @@
         justify-content: center;
         margin: 0 auto 6rem;
         width: 100%;
+        transition: all 0.3s;
 
         @include mq("pc") {
             margin: 0 auto 8rem;
@@ -26,6 +27,7 @@
         padding: 2rem 0.5rem;
         border: 0.1rem solid black;
         cursor: pointer;
+        transition: all 0.3s;
 
         @include mq("pc") {
             padding: 3rem 1rem;
@@ -33,21 +35,34 @@
         }
 
         &--is-active {
-            background-color: red;
-            border: 0.1rem solid red;
+            position: relative;
+            background-color: $color-red;
+            border: 0.1rem solid $color-red;
 
             &::after {
                 position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 100%);
                 content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 26px 15px 0 15px;
+                border-color: $color-red transparent transparent transparent;
+
+                @include mq("pc") {
+                    border-width: 43.3px 25px 0 25px;
+                }
             }
         }
     }
 
     &__selector-text {
-        font-size: 1.4em;
+        font-size: 1.4rem;
         font-weight: bold;
         text-align: center;
-        //white-space: nowrap;
+        transition: all 0.3s;
 
         @include mq("pc") {
             font-size: 2.2rem;
@@ -58,12 +73,22 @@
         }
     }
 
+    &__content {
+        display: none;
+
+        &--is-active {
+            display: block;
+        }
+    }
+
     &__head {
         margin-bottom: 4rem;
         text-align: center;
+        font-size: 1.8rem;
         font-weight: bold;
 
         @include mq("pc") {
+            font-size: 2rem;
         }
     }
 
@@ -93,16 +118,33 @@
 
     &__name {
         text-align: center;
+        font-size: 2.4rem;
         font-weight: bold;
+
+        @include mq("pc") {
+            font-size: 2.8rem;
+        }
     }
 
     &__special {
-        max-width: 45rem;
+        max-width: 60rem;
         margin: 0 auto;
-        font-weight: bold;
+        font-size: 2.4rem;
+        line-height: 3rem;
+
+        @include mq("pc") {
+            font-size: 2.8rem;
+            line-height: 3.2rem;
+        }
     }
 
     &__special-word {
-        color: red;
+        font-size: 2.6rem;
+        color: $color-red;
+        font-weight: bold;
+
+        @include mq("pc") {
+            font-size: 3rem;
+        }
     }
 }
