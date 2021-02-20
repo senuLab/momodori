@@ -40,11 +40,11 @@
         }
     }
 
-    &__telephone {
+    &__telephone-wrap {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         margin-right: auto;
-        color: white;
         text-align: center;
         font-size: 1.4rem;
         font-weight: bold;
@@ -53,5 +53,9 @@
         @include mq("pc") {
             margin: 0;
         }
+    }
+
+    &__telephone {
+        color: white;
     }
 }
