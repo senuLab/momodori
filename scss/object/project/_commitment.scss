@@ -1,0 +1,211 @@
+.p-commitment {
+    padding: 8rem 3rem;
+
+    @include mq("pc") {
+        padding: 10rem 10rem 5rem;
+    }
+
+    &__title {
+        margin: 0 auto 10rem;
+    }
+
+    &__content-wrap {
+        @include mq("pc") {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        max-width: 30rem;
+        margin: 0 auto;
+
+        @include mq("pc") {
+            display: flex;
+            max-width: 95rem;
+        }
+
+        &:nth-child(even) {
+            @include mq("pc") {
+                flex-direction: row-reverse;
+            }
+        }
+
+        &:nth-child(odd) > .p-commitment__img-wrap {
+            @include mq("pc") {
+                margin-right: 10rem;
+            }
+        }
+
+        &:nth-child(even) > .p-commitment__message {
+            @include mq("pc") {
+                margin-right: 10rem;
+            }
+        }
+
+        &:not(:nth-child(n + 4)) {
+            @include mq("pc") {
+                margin-bottom: 6rem;
+            }
+        }
+
+        &:nth-last-child(2) {
+            @include mq("pc") {
+                margin-bottom: 10rem;
+            }
+        }
+    }
+
+    &__img-wrap {
+        width: 100%;
+        margin-bottom: 4rem;
+
+        @include mq("pc") {
+            max-width: 40rem;
+            margin: 0;
+        }
+    }
+
+    &__message {
+        margin-bottom: 6rem;
+
+        @include mq("pc") {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0;
+        }
+    }
+
+    &__head {
+        position: relative;
+        width: fit-content;
+        margin: 0 auto 4rem;
+        font-size: 2.4rem;
+        font-weight: bold;
+
+        @include mq("pc") {
+            font-size: 3rem;
+        }
+
+        &::before {
+            position: absolute;
+            z-index: -1;
+            top: -3rem;
+            left: -3rem;
+            content: "";
+            width: 7rem;
+            height: 7rem;
+            background-color: rgba($color: #bcb046, $alpha: 0.5);
+            border-radius: 50%;
+
+            @include mq("pc") {
+                top: -3.5rem;
+                left: -3.5rem;
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+    }
+
+    &__body {
+        max-width: 45rem;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+
+        @include mq("pc") {
+            font-size: 2.4rem;
+            line-height: 3rem;
+        }
+    }
+
+    &__sns {
+        max-width: 30rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__sns-introduction {
+        position: relative;
+        margin-bottom: 4rem;
+        padding: 0 1.5rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+        line-height: 2rem;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%) rotate(-30deg);
+            content: "";
+            width: 0.4rem;
+            height: 5rem;
+            background-color: black;
+        }
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%) rotate(30deg);
+            content: "";
+            width: 0.4rem;
+            height: 5rem;
+            background-color: black;
+        }
+    }
+
+    &__sns-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.4rem;
+        font-weight: bold;
+    }
+
+    &__sns-icon-wrap {
+        position: relative; /*相対配置*/
+        display: inline-block;
+        margin-right: 1rem;
+        width: 50px; /*幅*/
+        height: 50px; /*高さ*/
+        background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%)
+            no-repeat;
+        background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat; /*グラデーション①*/
+        overflow: hidden; /*はみ出た部分を隠す*/
+        border-radius: 13px; /*角丸に*/
+
+        &::before {
+            content: "";
+            position: absolute; /*絶対配置*/
+            top: 23px; /*ずらす*/
+            left: -18px; /*ずらす*/
+            width: 60px; /*グラデーションカバーの幅*/
+            height: 60px; /*グラデーションカバーの高さ*/
+            background: -webkit-radial-gradient(
+                #ffdb2c 10%,
+                rgba(255, 105, 34, 0.65) 55%,
+                rgba(255, 88, 96, 0) 70%
+            );
+            background: radial-gradient(
+                #ffdb2c 10%,
+                rgba(255, 105, 34, 0.65) 55%,
+                rgba(255, 88, 96, 0) 70%
+            ); /*グラデーション②*/
+        }
+    }
+
+    &__sns-icon {
+        color: #fff; /*白に*/
+        position: relative; /*z-indexを使うため*/
+        z-index: 2; /*グラデーションより前に*/
+        font-size: 35px; /*アイコンサイズ*/
+        line-height: 50px !important; /*高さと合わせる*/
+
+        &:hover {
+            color: #668ad8; /*文字色*/
+            transition: 0.5s; /*ゆっくり変化*/
+        }
+    }
+}
