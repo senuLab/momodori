@@ -110,7 +110,9 @@
         margin-bottom: 5rem;
 
         @include mq("pc") {
-            max-width: 30rem;
+            //max-width: 30rem;
+            //width: calc(33% - 12rem);
+            width: 33%;
 
             &:not(:last-child) {
                 margin-right: 6rem;

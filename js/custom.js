@@ -41,6 +41,9 @@ $(function(){
 
     $(".js-link, .js-to-top").on("click",function(){
         let nav = $(".p-nav.js-nav");
+        let header = $(".js-header").height();
+
+        console.log(header);
         
         if(nav.hasClass("p-nav--active")){
             nav.toggleClass("p-nav--active");
