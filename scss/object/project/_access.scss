@@ -1,0 +1,111 @@
+.p-access {
+    padding: 4rem;
+
+    @include mq("pc") {
+        padding: 5rem 4rem 10rem;
+    }
+
+    &__title {
+        margin: 0 auto 8rem;
+
+        @include mq("pc") {
+            margin: 0 auto 10rem;
+        }
+    }
+
+    &__content-wrap {
+        margin-bottom: 7rem;
+
+        @include mq("pc") {
+            display: flex;
+            margin-bottom: 8rem;
+        }
+    }
+
+    &__map-wrap {
+        @include mq("pc") {
+            width: 50%;
+            margin-right: 10rem;
+        }
+    }
+
+    &__map {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    &__information {
+        @include mq("pc") {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%;
+        }
+    }
+
+    &__information-head {
+        margin-bottom: 2rem;
+        font-size: 2.6rem;
+        font-weight: bold;
+        text-align: center;
+
+        @include mq("pc") {
+            margin-bottom: 1.5rem;
+            font-size: 2.8rem;
+            text-align: left;
+        }
+    }
+    &__information-item {
+        font-size: 2rem;
+        line-height: 2.6rem;
+        text-align: center;
+
+        @include mq("pc") {
+            font-size: 2.2rem;
+            line-height: 2.4rem;
+            text-align: left;
+        }
+    }
+
+    &__reservation-message {
+        position: relative;
+        margin-bottom: 5.2rem;
+        padding: 0 1.5rem;
+        width: fit-content;
+        margin: 0 auto;
+        color: $color-red;
+        font-weight: bold;
+        text-align: center;
+
+        @include mq("pc") {
+            margin-bottom: 5.4rem;
+        }
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%) rotate(-30deg);
+            content: "";
+            width: 0.3rem;
+            height: 3rem;
+            background-color: $color-red;
+        }
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%) rotate(30deg);
+            content: "";
+            width: 0.3rem;
+            height: 3rem;
+            background-color: $color-red;
+        }
+    }
+
+    &__btn-wrap {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
