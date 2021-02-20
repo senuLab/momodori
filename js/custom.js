@@ -60,17 +60,29 @@ $(function(){
     }); 
 
     $(".js-selector").on("click",function(){
-        //console.log("click");
+        let id_hide;
+        let id_show;
+
         if(!$(this).hasClass("p-menu__selector--is-active")){
             $(".js-selector").each(function(index,element){
+                if($(this).hasClass("p-menu__selector--is-active")){
+                    id_hide = index;
+                    $(".p-menu__content").eq(id_hide).removeClass("p-menu__content--is-active");
+                    //$(".p-menu__content").eq(id_hide).fadeOut(300);
+                    
+                }
                 $(this).removeClass("p-menu__selector--is-active");
                 $(this).children().removeClass("p-menu__selector-text--is-active");
-                //console.log(element);
             });
 
             $(this).addClass("p-menu__selector--is-active")
             $(this).children().addClass("p-menu__selector-text--is-active")
+            id_show = $(this).index();
+            $(".p-menu__content").eq(id_show).addClass("p-menu__content--is-active");
+            //$(".p-menu__content").eq(id_show).fadeIn(300);
         }
+
+
     });
 
 });
