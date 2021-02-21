@@ -3,11 +3,9 @@ $(function(){
 
     $(window).on('scroll',function() {
         let scroll = $(window).scrollTop();
-        //let header_position = $(".l-header").offset().top;
 
-
-            if(scroll>header_position){
-                if(!$(".l-header").hasClass("active")){
+        if(scroll > header_position){
+            if(!$(".l-header").hasClass("active")){
                 $(".l-header").css("position","fixed");
                 $(".l-header").css("top","0");
                 $(".l-header").addClass("active");
@@ -18,15 +16,22 @@ $(function(){
                 else{
                     $(".p-commitment").css("margin-top","10rem");
                 }
-                }
             }
-            else{
-                if($(".l-header").hasClass("active")){
+        }
+        else{
+            if($(".l-header").hasClass("active")){
                 $(".l-header").css("position","static");
                 $(".l-header").removeClass("active");
                 $(".p-commitment").css("margin-top","0");
-                }
             }
+        }
+        
+        if ($(this).scrollTop() > 100) {
+            $('.p-to-top').fadeIn();
+        } 
+        else {
+            $('.p-to-top').fadeOut();
+        }
 
     });
 
