@@ -1,5 +1,5 @@
 .p-commitment {
-    padding: 4rem 3rem;
+    padding: 8rem 3rem 4rem;
 
     @include mq("pc") {
         padding: 10rem 10rem 5rem;
@@ -65,12 +65,14 @@
         margin-bottom: 4rem;
 
         @include mq("pc") {
+            width: 50%;
             max-width: 40rem;
             margin: 0;
         }
     }
 
     &__message {
+        width: 100%;
         margin-bottom: 6rem;
 
         @include mq("pc") {
@@ -78,6 +80,8 @@
             flex-direction: column;
             justify-content: center;
             margin: 0;
+            width: 50%;
+            max-width: 40rem;
         }
     }
 
@@ -165,7 +169,11 @@
         justify-content: center;
         align-items: center;
         font-size: 2.4rem;
-        font-weight: bold;
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 
     &__sns-icon-wrap {
@@ -206,10 +214,5 @@
         z-index: 2; /*グラデーションより前に*/
         font-size: 35px; /*アイコンサイズ*/
         line-height: 50px !important; /*高さと合わせる*/
-
-        &:hover {
-            color: #668ad8; /*文字色*/
-            transition: 0.5s; /*ゆっくり変化*/
-        }
     }
 }

@@ -1,0 +1,32 @@
+.p-to-top {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: map-get($layers, to-top);
+    width: 8rem;
+    height: 12rem;
+    display: none;
+
+    &__link {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+
+        &::before {
+            position: absolute;
+            top: -2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            content: "TOPへ";
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
