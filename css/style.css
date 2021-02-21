@@ -425,8 +425,31 @@ body {
 }
 
 .p-commitment__img-wrap {
+  position: relative;
   width: 100%;
   margin-bottom: 4rem;
+}
+
+.p-commitment__img-wrap::after {
+  /*影を入れる*/
+  -webkit-box-shadow: 0 15px 10px #8d8c8c;
+  -moz-box-shadow: 0 15px 10px #8d8c8c;
+  /*回転させる*/
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  z-index: -1;
+  position: absolute;
+  top: 80%;
+  bottom: 10px;
+  left: 10px;
+  width: 70%;
+  max-width: 432px;
+  transform: rotate(-5deg);
+  background: #8d8c8c;
+  box-shadow: 0 15px 10px #8d8c8c;
+  content: "";
 }
 
 .p-commitment__message {
@@ -578,7 +601,7 @@ body {
 }
 
 .p-footer__icon-wrap:not(:last-child) {
-  margin-right: 4rem;
+  margin-right: 3rem;
 }
 
 .p-footer__icon {
@@ -630,6 +653,14 @@ body {
 
 .p-header__telephone {
   color: white;
+}
+
+.p-header__telephone > a {
+  color: white;
+}
+
+.p-header__telephone:first-child {
+  margin-bottom: 0.2rem;
 }
 
 .p-header__telephone-icon {
@@ -835,10 +866,10 @@ body {
   display: none;
   z-index: 4;
   position: fixed;
-  right: 3rem;
+  right: 2rem;
   bottom: 3rem;
-  width: 8rem;
-  height: 12rem;
+  width: 6rem;
+  height: 9rem;
 }
 
 .p-to-top__link {
@@ -853,10 +884,10 @@ body {
   top: -2.5rem;
   left: 50%;
   width: 100%;
-  transform: translateX(-50%);
+  transform: translateX(-40%);
   content: "TOPへ";
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-align: center;
 }
 
@@ -1076,6 +1107,15 @@ body {
   .p-nav__link:hover {
     background-color: white;
     color: #2a8212;
+  }
+  .p-to-top {
+    right: 5rem;
+    bottom: 5rem;
+    width: 8rem;
+    height: 12rem;
+  }
+  .p-to-top__link::before {
+    font-size: 2rem;
   }
   .p-top {
     width: 100%;

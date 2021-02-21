@@ -57,6 +57,14 @@
 
     &__telephone {
         color: white;
+
+        & > a {
+            color: white;
+        }
+
+        &:first-child {
+            margin-bottom: 0.2rem;
+        }
     }
 
     &__telephone-icon {
