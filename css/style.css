@@ -312,7 +312,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   font-weight: bold;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
 }
 
 .c-title::before {
@@ -340,7 +340,7 @@ body {
 }
 
 .p-access {
-  padding: 4rem;
+  padding: 4rem 4rem 8rem;
 }
 
 .p-access__title {
@@ -359,7 +359,7 @@ body {
 .p-access__information-head {
   margin-bottom: 2rem;
   font-weight: bold;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   text-align: center;
 }
 
@@ -914,7 +914,7 @@ body {
     right: 1rem;
   }
   .c-title {
-    font-size: 3.6rem;
+    font-size: 3.4rem;
   }
   .c-title::before {
     right: -1.5rem;
