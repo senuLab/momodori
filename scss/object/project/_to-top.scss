@@ -1,11 +1,18 @@
 .p-to-top {
     position: fixed;
     bottom: 3rem;
-    right: 3rem;
+    right: 2rem;
     z-index: map-get($layers, to-top);
-    width: 8rem;
-    height: 12rem;
+    width: 6rem;
+    height: 9rem;
     display: none;
+
+    @include mq("pc") {
+        width: 8rem;
+        height: 12rem;
+        bottom: 5rem;
+        right: 5rem;
+    }
 
     &__link {
         position: relative;
@@ -17,12 +24,16 @@
             position: absolute;
             top: -2.5rem;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-40%);
             width: 100%;
             content: "TOPへ";
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: bold;
             text-align: center;
+
+            @include mq("pc") {
+                font-size: 2rem;
+            }
         }
     }
 

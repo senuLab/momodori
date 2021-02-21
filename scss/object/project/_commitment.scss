@@ -61,6 +61,7 @@
     }
 
     &__img-wrap {
+        position: relative;
         width: 100%;
         margin-bottom: 4rem;
 
@@ -68,6 +69,28 @@
             width: 50%;
             max-width: 40rem;
             margin: 0;
+        }
+
+        &::after {
+            z-index: -1;
+            position: absolute;
+            content: "";
+            bottom: 10px;
+            left: 10px;
+            width: 70%;
+            top: 80%;
+            max-width: 432px;
+            background: #8d8c8c;
+            /*影を入れる*/
+            -webkit-box-shadow: 0 15px 10px #8d8c8c;
+            -moz-box-shadow: 0 15px 10px #8d8c8c;
+            box-shadow: 0 15px 10px #8d8c8c;
+            /*回転させる*/
+            -webkit-transform: rotate(-5deg);
+            -moz-transform: rotate(-5deg);
+            -o-transform: rotate(-5deg);
+            -ms-transform: rotate(-5deg);
+            transform: rotate(-5deg);
         }
     }
 

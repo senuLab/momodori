@@ -20,7 +20,7 @@
         }
 
         &:not(:last-child) {
-            margin-right: 4rem;
+            margin-right: 3rem;
 
             @include mq("pc") {
                 margin-right: 7rem;
