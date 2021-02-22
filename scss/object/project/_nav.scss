@@ -41,16 +41,17 @@
     }
 
     &__item {
-        padding: 1rem 0;
+        padding: 1.2rem 1.2rem;
         border-top: 0.2rem solid $color-darkgreen;
 
         @include mq("pc") {
+            padding: 4.2rem 0;
             border: none;
         }
     }
 
     &__link {
-        padding: 1rem 0;
+        padding: 1.2rem 1.2rem;
         font-weight: bold;
         transition: background-color 0.3s, color 0.3s;
 

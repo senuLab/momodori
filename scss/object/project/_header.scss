@@ -57,9 +57,12 @@
 
     &__telephone {
         color: white;
+        pointer-events: initial;
+        cursor: pointer;
 
-        & > a {
-            color: white;
+        @include mq("pc") {
+            pointer-events: none;
+            cursor: none;
         }
 
         &:first-child {

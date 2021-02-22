@@ -340,31 +340,41 @@ body {
 }
 
 .p-access {
-  padding: 4rem 4rem 8rem;
+  padding: 4rem 2rem 8rem;
 }
 
 .p-access__title {
-  margin: 0 auto 8rem;
+  margin: 0 auto 6rem;
 }
 
 .p-access__content-wrap {
   margin-bottom: 7rem;
 }
 
-.p-access__map {
-  width: 100%;
+.p-access__map-wrap {
+  position: relative;
+  height: 0;
   margin-bottom: 4rem;
+  padding-bottom: 56.25%;
+}
+
+.p-access__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .p-access__information-head {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: bold;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   text-align: center;
 }
 
 .p-access__information-item {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   line-height: 2.6rem;
   text-align: center;
 }
@@ -416,7 +426,7 @@ body {
 }
 
 .p-commitment__title {
-  margin: 0 auto 8rem;
+  margin: 0 auto 6rem;
 }
 
 .p-commitment__content {
@@ -497,7 +507,7 @@ body {
   padding: 0 1.5rem;
   font-weight: bold;
   font-size: 1.8rem;
-  line-height: 2rem;
+  line-height: 3rem;
 }
 
 .p-commitment__sns-introduction::before {
@@ -526,7 +536,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.4rem;
+  font-size: 2rem;
   transition: all 0.3s;
 }
 
@@ -538,9 +548,9 @@ body {
   /*相対配置*/
   display: inline-block;
   position: relative;
-  width: 50px;
+  width: 40px;
   /*幅*/
-  height: 50px;
+  height: 40px;
   margin-right: 1rem;
   /*グラデーション①*/
   overflow: hidden;
@@ -574,9 +584,9 @@ body {
   position: relative;
   color: #fff;
   /*グラデーションより前に*/
-  font-size: 35px;
+  font-size: 30px;
   /*アイコンサイズ*/
-  line-height: 50px !important;
+  line-height: 40px !important;
   /*高さと合わせる*/
 }
 
@@ -614,6 +624,7 @@ body {
 
 .p-footer__copyright {
   color: white;
+  line-height: 2rem;
   text-align: center;
 }
 
@@ -653,10 +664,8 @@ body {
 
 .p-header__telephone {
   color: white;
-}
-
-.p-header__telephone > a {
-  color: white;
+  cursor: pointer;
+  pointer-events: initial;
 }
 
 .p-header__telephone:first-child {
@@ -672,7 +681,7 @@ body {
 }
 
 .p-menu__title {
-  margin: 0 auto 8rem;
+  margin: 0 auto 6rem;
 }
 
 .p-menu__selector-wrap {
@@ -724,9 +733,6 @@ body {
 
 .p-menu__content {
   display: none;
-  /* &:nth-child(2) {
-            display: block;
-        } */
 }
 
 .p-menu__content--is-active {
@@ -746,7 +752,7 @@ body {
 
 .p-menu__img-wrap {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .p-menu__img-wrap::before {
@@ -770,14 +776,14 @@ body {
 .p-menu__special {
   max-width: 60rem;
   margin: 0 auto;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 3rem;
 }
 
 .p-menu__special-word {
   color: #d23535;
   font-weight: bold;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
 }
 
 .p-nav {
@@ -804,12 +810,12 @@ body {
 }
 
 .p-nav__item {
-  padding: 1rem 0;
+  padding: 1.2rem 1.2rem;
   border-top: 0.2rem solid #1d640a;
 }
 
 .p-nav__link {
-  padding: 1rem 0;
+  padding: 1.2rem 1.2rem;
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -926,7 +932,7 @@ body {
     padding: 5rem 4rem 10rem;
   }
   .p-access__title {
-    margin: 0 auto 10rem;
+    margin: 0 auto 8rem;
   }
   .p-access__content-wrap {
     display: flex;
@@ -934,7 +940,9 @@ body {
   }
   .p-access__map-wrap {
     width: 50%;
+    margin: 0;
     margin-right: 10rem;
+    padding-bottom: 50%;
   }
   .p-access__information {
     display: flex;
@@ -943,13 +951,12 @@ body {
     width: 50%;
   }
   .p-access__information-head {
-    margin-bottom: 1.5rem;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     text-align: left;
   }
   .p-access__information-item {
-    font-size: 2.2rem;
-    line-height: 2.8rem;
+    font-size: 1.8rem;
+    line-height: 3rem;
     text-align: left;
   }
   .p-access__reservation-message {
@@ -959,7 +966,7 @@ body {
     padding: 10rem 10rem 5rem;
   }
   .p-commitment__title {
-    margin: 0 auto 10rem;
+    margin: 0 auto 8rem;
   }
   .p-commitment__content-wrap {
     display: flex;
@@ -973,13 +980,13 @@ body {
     flex-direction: row-reverse;
   }
   .p-commitment__content:nth-child(odd) > .p-commitment__img-wrap {
-    margin-right: 10rem;
+    margin-right: 6rem;
   }
   .p-commitment__content:nth-child(even) > .p-commitment__message {
-    margin-right: 10rem;
+    margin-right: 6rem;
   }
   .p-commitment__content:not(:nth-child(n + 4)) {
-    margin-bottom: 6rem;
+    margin-bottom: 10rem;
   }
   .p-commitment__content:nth-last-child(2) {
     margin-bottom: 10rem;
@@ -1042,11 +1049,15 @@ body {
   .p-header__telephone-wrap {
     margin: 0;
   }
+  .p-header__telephone {
+    cursor: none;
+    pointer-events: none;
+  }
   .p-menu {
     padding: 5rem 4rem 5rem;
   }
   .p-menu__title {
-    margin: 0 auto 10rem;
+    margin: 0 auto 8rem;
   }
   .p-menu__selector-wrap {
     margin: 0 auto 8rem;
@@ -1078,10 +1089,10 @@ body {
   }
   .p-menu__special {
     font-size: 2.8rem;
-    line-height: 3.2rem;
+    line-height: 3.4rem;
   }
   .p-menu__special-word {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
   .p-nav {
     visibility: visible;
@@ -1099,6 +1110,7 @@ body {
     height: 100%;
   }
   .p-nav__item {
+    padding: 4.2rem 0;
     border: none;
   }
   .p-nav__link {
