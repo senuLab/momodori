@@ -86,6 +86,10 @@
         }
     }
 
+    &__img {
+        border-radius: 5px;
+    }
+
     &__message {
         width: 100%;
         margin-bottom: 6rem;
@@ -119,7 +123,7 @@
             content: "";
             width: 7rem;
             height: 7rem;
-            background-color: rgba($color: #bcb046, $alpha: 0.5);
+            background-color: rgba(#bcb046, 0.5);
             border-radius: 50%;
 
             @include mq("pc") {
@@ -134,11 +138,10 @@
     &__body {
         max-width: 45rem;
         font-size: 1.8rem;
-        line-height: 2.8rem;
+        line-height: 1.6em;
 
         @include mq("pc") {
             font-size: 2.4rem;
-            line-height: 3.4rem;
         }
     }
 
@@ -154,7 +157,7 @@
         padding: 0 1.5rem;
         font-size: 1.8rem;
         font-weight: bold;
-        line-height: 3rem;
+        line-height: 1.4em;
 
         &::before {
             position: absolute;
@@ -199,7 +202,7 @@
         height: 4rem;
         background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
         overflow: hidden;
-        border-radius: 1.3rem;
+        border-radius: 10px;
 
         &::before {
             content: "";
