@@ -75,21 +75,13 @@
             z-index: -1;
             position: absolute;
             content: "";
-            bottom: 10px;
-            left: 10px;
-            width: 70%;
+            bottom: 1rem;
+            left: 1rem;
             top: 80%;
-            max-width: 432px;
+            width: 70%;
+            max-width: 30rem;
             background: #8d8c8c;
-            /*影を入れる*/
-            -webkit-box-shadow: 0 15px 10px #8d8c8c;
-            -moz-box-shadow: 0 15px 10px #8d8c8c;
-            box-shadow: 0 15px 10px #8d8c8c;
-            /*回転させる*/
-            -webkit-transform: rotate(-5deg);
-            -moz-transform: rotate(-5deg);
-            -o-transform: rotate(-5deg);
-            -ms-transform: rotate(-5deg);
+            box-shadow: 0 1.5rem 1rem #8d8c8c;
             transform: rotate(-5deg);
         }
     }
@@ -142,11 +134,11 @@
     &__body {
         max-width: 45rem;
         font-size: 1.8rem;
-        line-height: 2.4rem;
+        line-height: 2.8rem;
 
         @include mq("pc") {
             font-size: 2.4rem;
-            line-height: 3rem;
+            line-height: 3.4rem;
         }
     }
 
@@ -200,42 +192,35 @@
     }
 
     &__sns-icon-wrap {
-        position: relative; /*相対配置*/
+        position: relative;
         display: inline-block;
         margin-right: 1rem;
-        width: 40px; /*幅*/
-        height: 40px; /*高さ*/
-        background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%)
-            no-repeat;
-        background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat; /*グラデーション①*/
-        overflow: hidden; /*はみ出た部分を隠す*/
-        border-radius: 13px; /*角丸に*/
+        width: 4rem;
+        height: 4rem;
+        background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+        overflow: hidden;
+        border-radius: 1.3rem;
 
         &::before {
             content: "";
-            position: absolute; /*絶対配置*/
-            top: 23px; /*ずらす*/
-            left: -18px; /*ずらす*/
-            width: 60px; /*グラデーションカバーの幅*/
-            height: 60px; /*グラデーションカバーの高さ*/
-            background: -webkit-radial-gradient(
-                #ffdb2c 10%,
-                rgba(255, 105, 34, 0.65) 55%,
-                rgba(255, 88, 96, 0) 70%
-            );
+            position: absolute;
+            top: 2.3rem;
+            left: -1.8rem;
+            width: 6rem;
+            height: 6rem;
             background: radial-gradient(
                 #ffdb2c 10%,
                 rgba(255, 105, 34, 0.65) 55%,
                 rgba(255, 88, 96, 0) 70%
-            ); /*グラデーション②*/
+            );
         }
     }
 
     &__sns-icon {
-        color: #fff; /*白に*/
-        position: relative; /*z-indexを使うため*/
-        z-index: 2; /*グラデーションより前に*/
-        font-size: 30px; /*アイコンサイズ*/
-        line-height: 40px !important; /*高さと合わせる*/
+        color: #fff;
+        position: relative;
+        z-index: 2;
+        font-size: 2.6rem;
+        line-height: 4rem !important;
     }
 }

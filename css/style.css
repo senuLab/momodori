@@ -441,24 +441,16 @@ body {
 }
 
 .p-commitment__img-wrap::after {
-  /*影を入れる*/
-  -webkit-box-shadow: 0 15px 10px #8d8c8c;
-  -moz-box-shadow: 0 15px 10px #8d8c8c;
-  /*回転させる*/
-  -webkit-transform: rotate(-5deg);
-  -moz-transform: rotate(-5deg);
-  -o-transform: rotate(-5deg);
-  -ms-transform: rotate(-5deg);
   z-index: -1;
   position: absolute;
   top: 80%;
-  bottom: 10px;
-  left: 10px;
+  bottom: 1rem;
+  left: 1rem;
   width: 70%;
-  max-width: 432px;
+  max-width: 30rem;
   transform: rotate(-5deg);
   background: #8d8c8c;
-  box-shadow: 0 15px 10px #8d8c8c;
+  box-shadow: 0 1.5rem 1rem #8d8c8c;
   content: "";
 }
 
@@ -492,7 +484,7 @@ body {
 .p-commitment__body {
   max-width: 45rem;
   font-size: 1.8rem;
-  line-height: 2.4rem;
+  line-height: 2.8rem;
 }
 
 .p-commitment__sns {
@@ -545,49 +537,32 @@ body {
 }
 
 .p-commitment__sns-icon-wrap {
-  /*相対配置*/
   display: inline-block;
   position: relative;
-  width: 40px;
-  /*幅*/
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
   margin-right: 1rem;
-  /*グラデーション①*/
   overflow: hidden;
-  /*はみ出た部分を隠す*/
-  border-radius: 13px;
-  /*高さ*/
+  border-radius: 1.3rem;
   background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-  /*角丸に*/
 }
 
 .p-commitment__sns-icon-wrap::before {
   position: absolute;
-  /*絶対配置*/
-  top: 23px;
-  /*ずらす*/
-  left: -18px;
-  /*ずらす*/
-  width: 60px;
-  /*グラデーションカバーの幅*/
-  height: 60px;
-  /*グラデーションカバーの高さ*/
+  top: 2.3rem;
+  left: -1.8rem;
+  width: 6rem;
+  height: 6rem;
   background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
   content: "";
-  /*グラデーション②*/
 }
 
 .p-commitment__sns-icon {
-  /*z-indexを使うため*/
   z-index: 2;
-  /*白に*/
   position: relative;
   color: #fff;
-  /*グラデーションより前に*/
-  font-size: 30px;
-  /*アイコンサイズ*/
-  line-height: 40px !important;
-  /*高さと合わせる*/
+  font-size: 2.6rem;
+  line-height: 4rem !important;
 }
 
 .p-footer {
@@ -714,7 +689,7 @@ body {
   width: 0;
   height: 0;
   transform: translate(-50%, 100%);
-  border-width: 26px 15px 0 15px;
+  border-width: 2.6rem 1.5rem 0 1.5rem;
   border-style: solid;
   border-color: #d23535 transparent transparent transparent;
   content: "";
@@ -743,7 +718,12 @@ body {
   margin-bottom: 4rem;
   font-weight: bold;
   font-size: 1.8rem;
+  line-height: 2.4rem;
   text-align: center;
+}
+
+.p-menu__head > span {
+  display: inline-block;
 }
 
 .p-menu__item {
@@ -837,7 +817,7 @@ body {
   left: 0;
   width: 100%;
   height: 0.3rem;
-  border-radius: 4px;
+  border-radius: 0.4rem;
   background-color: white;
   transition: all 0.5s;
 }
@@ -891,7 +871,7 @@ body {
   left: 50%;
   width: 100%;
   transform: translateX(-40%);
-  content: "TOPへ";
+  content: "TOP";
   font-weight: bold;
   font-size: 1.6rem;
   text-align: center;
@@ -929,6 +909,8 @@ body {
     left: -1.5rem;
   }
   .p-access {
+    max-width: 120rem;
+    margin: 0 auto;
     padding: 5rem 4rem 10rem;
   }
   .p-access__title {
@@ -1015,7 +997,7 @@ body {
   }
   .p-commitment__body {
     font-size: 2.4rem;
-    line-height: 3rem;
+    line-height: 3.4rem;
   }
   .p-footer__icon-wrap {
     width: 10rem;
@@ -1054,6 +1036,8 @@ body {
     pointer-events: none;
   }
   .p-menu {
+    max-width: 120rem;
+    margin: 0 auto;
     padding: 5rem 4rem 5rem;
   }
   .p-menu__title {
@@ -1067,7 +1051,7 @@ body {
     padding: 3rem 1rem;
   }
   .p-menu__selector--is-active::after {
-    border-width: 43.3px 25px 0 25px;
+    border-width: 4.33rem 2.5rem 0 2.5rem;
   }
   .p-menu__selector-text {
     font-size: 2.2rem;
@@ -1089,7 +1073,7 @@ body {
   }
   .p-menu__special {
     font-size: 2.8rem;
-    line-height: 3.4rem;
+    line-height: 3.8rem;
   }
   .p-menu__special-word {
     font-size: 3.2rem;
