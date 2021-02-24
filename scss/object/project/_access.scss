@@ -3,6 +3,8 @@
 
     @include mq("pc") {
         padding: 5rem 4rem 10rem;
+        max-width: 120rem;
+        margin: 0 auto;
     }
 
     &__title {
