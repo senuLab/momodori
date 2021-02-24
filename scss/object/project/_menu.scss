@@ -31,7 +31,8 @@
         position: relative;
         width: 100%;
         padding: 2rem 0.5rem;
-        border: 0.1rem solid black;
+        border: 3px solid black;
+        border-radius: 10px;
         cursor: pointer;
         transition: all 0.3s;
 
@@ -40,10 +41,18 @@
             max-width: 35rem;
         }
 
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &:hover {
+            background-color: rgba($color-red, 0.5);
+        }
+
         &--is-active {
             position: relative;
             background-color: $color-red;
-            border: 0.1rem solid $color-red;
+            border: 1px solid $color-red;
 
             &::after {
                 position: absolute;
@@ -54,12 +63,16 @@
                 width: 0;
                 height: 0;
                 border-style: solid;
-                border-width: 2.6rem 1.5rem 0 1.5rem;
+                border-width: 26px 15px 0 15px;
                 border-color: $color-red transparent transparent transparent;
 
                 @include mq("pc") {
-                    border-width: 4.33rem 2.5rem 0 2.5rem;
+                    border-width: 43.3px 25px 0 25px;
                 }
+            }
+
+            &:hover {
+                background-color: rgba($color-red, 1);
             }
         }
     }
@@ -68,6 +81,7 @@
         font-size: 1.4rem;
         font-weight: bold;
         text-align: center;
+        line-height: 1.4em;
         transition: all 0.3s;
 
         @include mq("pc") {
@@ -81,6 +95,12 @@
 
     &__content {
         display: none;
+        max-width: 50rem;
+        margin: 0 auto;
+
+        @include mq("pc") {
+            max-width: 120rem;
+        }
 
         &--is-active {
             display: block;
@@ -92,10 +112,10 @@
         text-align: center;
         font-size: 1.8rem;
         font-weight: bold;
-        line-height: 2.4rem;
+        line-height: 1.6em;
 
         @include mq("pc") {
-            font-size: 2rem;
+            font-size: 2.4rem;
         }
 
         & > span {
@@ -136,17 +156,17 @@
             width: 100%;
             height: 100%;
             transform: translate(-50%, -50%) rotate(3deg);
-            background-color: #bcb046;
+            background-color: rgba(#bcb046, 0.7);
         }
     }
 
     &__name {
         text-align: center;
-        font-size: 2.4rem;
+        font-size: calc(1.6rem + 1.5vw);
         font-weight: bold;
 
         @include mq("pc") {
-            font-size: 2.8rem;
+            font-size: 2.4rem;
         }
     }
 
@@ -154,11 +174,10 @@
         max-width: 60rem;
         margin: 0 auto;
         font-size: 2rem;
-        line-height: 3rem;
+        line-height: 1.6em;
 
         @include mq("pc") {
             font-size: 2.8rem;
-            line-height: 3.8rem;
         }
     }
 

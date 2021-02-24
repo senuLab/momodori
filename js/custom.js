@@ -47,8 +47,6 @@ $(function(){
     $(".js-link, .js-to-top").on("click",function(){
         let nav = $(".p-nav.js-nav");
         let header = $(".js-header").height();
-
-        console.log(header);
         
         if(nav.hasClass("p-nav--active")){
             nav.toggleClass("p-nav--active");
@@ -75,9 +73,7 @@ $(function(){
             $(".js-selector").each(function(index,element){
                 if($(this).hasClass("p-menu__selector--is-active")){
                     id_hide = index;
-                    $(".p-menu__content").eq(id_hide).removeClass("p-menu__content--is-active");
-                    //$(".p-menu__content").eq(id_hide).fadeOut(300);
-                    
+                    $(".p-menu__content").eq(id_hide).removeClass("p-menu__content--is-active");                    
                 }
                 $(this).removeClass("p-menu__selector--is-active");
                 $(this).children().removeClass("p-menu__selector-text--is-active");
@@ -87,7 +83,6 @@ $(function(){
             $(this).children().addClass("p-menu__selector-text--is-active")
             id_show = $(this).index();
             $(".p-menu__content").eq(id_show).addClass("p-menu__content--is-active");
-            //$(".p-menu__content").eq(id_show).fadeIn(300);
         }
 
 

@@ -16,7 +16,7 @@
         transform: translateY(-50%);
         width: 0.5rem;
         height: 100%;
-        border: 0.2rem solid #000;
+        border: 2px solid #000;
         border-left: none;
 
         @include mq("pc") {
@@ -32,7 +32,7 @@
         transform: translateY(-50%);
         width: 0.5rem;
         height: 100%;
-        border: 0.2rem solid #000;
+        border: 2px solid #000;
         border-right: none;
 
         @include mq("pc") {

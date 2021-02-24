@@ -1,7 +1,7 @@
 .c-btn {
     position: relative;
     padding: 1.2rem 2rem;
-    border-radius: 3rem;
+    border-radius: 30px;
     background: #d23535;
     color: white;
     font-weight: bold;
@@ -22,8 +22,8 @@
         width: 0.5rem;
         height: 0.5rem;
         transform: translateY(-50%) rotate(-45deg);
-        border-right: 0.2rem solid white;
-        border-bottom: 0.2rem solid white;
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
         transition: all 0.3s;
 
         @include mq("pc") {
@@ -36,8 +36,8 @@
         background-color: white;
 
         &::after {
-            border-right: 0.2rem solid #d23535;
-            border-bottom: 0.2rem solid #d23535;
+            border-right: 2px solid #d23535;
+            border-bottom: 2px solid #d23535;
         }
     }
 
