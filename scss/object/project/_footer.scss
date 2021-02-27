@@ -36,7 +36,34 @@
         font-size: 4rem;
 
         @include mq("pc") {
-            font-size: 7rem;
+            font-size: 6rem;
+        }
+
+        &--twitter {
+            &:hover {
+                &::before {
+                    color: #1877f2;
+                    transition: all 0.3s;
+                }
+            }
+        }
+
+        &--facebook {
+            &:hover {
+                &::before {
+                    color: #3b5998;
+                    transition: all 0.3s;
+                }
+            }
+        }
+
+        &--instagram {
+            &:hover {
+                &::before {
+                    color: #ad39db;
+                    transition: all 0.3s;
+                }
+            }
         }
     }
 

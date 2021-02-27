@@ -462,6 +462,21 @@ body {
   font-size: 4rem;
 }
 
+.p-footer__icon--twitter:hover::before {
+  color: #1877f2;
+  transition: all 0.3s;
+}
+
+.p-footer__icon--facebook:hover::before {
+  color: #3b5998;
+  transition: all 0.3s;
+}
+
+.p-footer__icon--instagram:hover::before {
+  color: #ad39db;
+  transition: all 0.3s;
+}
+
 .p-footer__copyright {
   color: white;
   line-height: 1.6em;
@@ -888,7 +903,7 @@ body {
     margin-right: 7rem;
   }
   .p-footer__icon {
-    font-size: 7rem;
+    font-size: 6rem;
   }
   .p-header {
     flex-direction: row;
@@ -902,7 +917,7 @@ body {
     height: -moz-fit-content;
     height: fit-content;
     margin: auto 0;
-    margin-left: auto;
+    margin-right: auto;
     font-size: 1.6rem;
   }
   .p-header__btn {
